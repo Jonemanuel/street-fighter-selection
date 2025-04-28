@@ -1,0 +1,110 @@
+body {
+  background: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/231af765-792b-4b50-a23b-b169ea76ddbb/df77an6-c95285b6-72b3-43b9-95bd-1fb3947c946c.png/v1/fill/w_1192,h_670,q_70,strp/ryu_street_fighter_wallpaper_by_mackalbrook_df77an6-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6IlwvZlwvMjMxYWY3NjUtNzkyYi00YjUwLWEyM2ItYjE2OWVhNzZkZGJiXC9kZjc3YW42LWM5NTI4NWI2LTcyYjMtNDNiOS05NWJkLTFmYjM5NDdjOTQ2Yy5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.4DJHtkZa3JzwYg-h7VZsztjBnle9hser4UozQ_VM1NA') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 48px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-family: 'Press Start 2P', sans-serif;
+
+  color: #00f0ff; /* Cor vibrante para o título */
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.character-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.character {
+  background-color: rgba(34, 34, 34, 0.9); /* Transparência leve para efeito profissional */
+  padding: 15px;
+  border: 3px solid transparent;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); /* Sombrinha para dar profundidade */
+}
+
+.character img {
+  width: 120px;
+  height: 120px;
+  border-radius: 8px;
+  border: 3px solid #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.character span {
+  display: block;
+  margin-top: 12px;
+  font-weight: bold;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #00f0ff;
+}
+
+.character:hover {
+  border-color: #00f0ff;
+  transform: translateY(-5px); /* Efeito de elevação */
+}
+
+.character.selected-p1 {
+  border-color: red;
+}
+
+.character.selected-p2 {
+  border-color: blue;
+}
+
+.selected {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.player {
+  background-color: rgba(34, 34, 34, 0.9);
+  padding: 25px;
+  border-radius: 12px;
+  width: 320px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+  margin: 20px;
+}
+
+.preview-img {
+  width: 300px;
+  height: 170px;
+  object-fit: contain; /* <- mudou de 'cover' para 'contain' */
+  margin-bottom: 10px;
+  background-color: none /* opcional: fundo preto para preencher o espaço vazio */
+}
+
+
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .character-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
